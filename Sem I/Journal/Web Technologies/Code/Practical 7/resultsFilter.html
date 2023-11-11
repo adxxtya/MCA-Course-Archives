@@ -1,0 +1,21 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <body>
+    <div ng-app="result" ng-controller="resultCtrl">
+		<h4>Result:</h4>
+		<pre>{{marks | json}}</pre>
+	</div>
+	<script>
+		var app = angular.module('result', []);
+		app.controller('resultCtrl', function ($scope) {
+			$scope.marks = {
+				"WT": 90,
+				"ADBMS": 80,
+				"JAVA": 75,
+				"DS": 100,
+				"SPM": 85
+			};
+		});
+	</script>
+  </body>
+</html>
